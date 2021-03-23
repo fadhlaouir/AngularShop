@@ -5,6 +5,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { AngularFireAuthModule } from '@angular/fire/auth'
 
 import { RouterModule } from '@angular/router'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,11 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    NgbModule,
     RouterModule.forRoot([
       // normal user
       { path: '', component: HomeComponent },
@@ -48,10 +54,6 @@ import { LoginComponent } from './login/login.component';
       { path: 'admin/orders', component: AdminOrdersComponent },
       { path: 'admin/products', component: AdminProductsComponent }
     ]),
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
