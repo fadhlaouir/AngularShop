@@ -50,6 +50,7 @@ import { LoginComponent } from './login/login.component';
       { path: 'check-out', component: CheckOutComponent },
       { path: 'order-success', component: OrderSuccessComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'my/orders', component: MyOrdersComponent },
       // admin
       { path: 'admin/orders', component: AdminOrdersComponent },
       { path: 'admin/products', component: AdminProductsComponent }
